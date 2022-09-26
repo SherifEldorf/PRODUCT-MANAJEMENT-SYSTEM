@@ -1,0 +1,66 @@
+<head>
+<meta charset="UTF-8" >
+<title> CRUDS </title>
+<link rel="stylesheet" href="style.css" >
+</head>
+<body>
+<div class="cruds">
+
+    <div class="head">
+        <h2>CRUDS</h2>
+        <p> PRODUCT MANAJEMENT SYSTEM </p>
+    </div>
+    <div class="inputs">
+        <input type="text" placeholder="title" id="title" >
+        <div class="price">
+            <input onkeyup="get_total()"  type="number" placeholder="price" id="price" >
+            <input onkeyup="get_total()" type="number" placeholder="taxes" id="taxes" >
+            <input onkeyup="get_total()" type="number" placeholder="ads" id="ads" >
+            <input  onkeyup="get_total()"type="number" placeholder="discount" id="discount" >
+            <small id="total" > '' </small>
+        </div>
+        <input type="number" placeholder="count" id="count" >
+        <input type="text" placeholder="Category" id="Category" >
+        <button  id="submit" > Create </button>
+
+    </div>
+    <div class="outputs">
+        <div class="searchblock">
+            <input type="text" onkeyup="searchdata(this.value)" placeholder="search" id="search" >
+            <div class="btnsearch">
+                <button onclick="getSearchMood(this.id)" id="searchtitle"> search by title </button>
+                <button onclick="getSearchMood(this.id)" id="searchCategory"> search by Category </button>
+            </div>
+            <div id="deleteall">
+                
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    
+                    <th>Category</th>
+                    <th>update</th>
+                    <th>delete</th>
+
+                </tr>
+                <tbody id="tbody" >
+                    
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+
+
+</div>
+
+<script src="main.js" ></script>
+</body>
